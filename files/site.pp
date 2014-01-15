@@ -42,3 +42,10 @@ node default {
   #   class { 'my_class': }
   hiera_include('classes')
 }
+
+node 'centos64a','centos64b','centos59a' {
+  include puppet_vim_env
+  include profile::tomcat
+  include profile::app::jenkins
+}
+
